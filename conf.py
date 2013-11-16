@@ -1,9 +1,6 @@
-
 from collections import OrderedDict
-############ CONFIGURATION ############
 
 #appkey and token (see trello api doc to get yours)
-
 # CHANGE THIS !!!!! (otherwise you will see my fantastic TodoList)
 appkey=u'64842214ed17777bee8742f8db14a6b'
 token=u'4f5feb695a661b3296789ce6a5fa3565b6cd6eb021f27e2ac6c1514befe65b1'
@@ -36,6 +33,3 @@ COLOR_TO_DISPLAY['red']='!'
 COLOR_TO_DISPLAY['orange']=""
 #COLOR_TO_DISPLAY[u'yellow']=""
 #COLOR_TO_DISPLAY[u'green']=""
-
-
-############ END OF CONFIGURATION ############
