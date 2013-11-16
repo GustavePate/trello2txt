@@ -44,7 +44,7 @@ Then just run
 
 Enjoy !
 
-# Use it with conky
+## Use it with conky
 
 First make sure you completed the installation section !
 
