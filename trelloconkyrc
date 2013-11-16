@@ -60,7 +60,7 @@ TEXT
 
 ${color1}TODO List
 ${voffset -20}
-${font Sans:size=9}${texeci 600 ~/git/trello2txt/trello2txt.py ~/git/trello2txt/myconf.py > ~/owncloud/sync/TODO.txt}
+${font Sans:size=9}${texeci 600 ~/git/trello2txt/trello2txt.py ~/git/trello2txt/conf.py > ~/owncloud/sync/TODO.txt}
 ${font Sans:size=9}${if_match "${texeci 10 sed -n '1p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '1p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
 ${font Sans:size=9}${if_match "${texeci 10 sed -n '2p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '2p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
 ${font Sans:size=9}${if_match "${texeci 10 sed -n '3p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '3p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
