@@ -63,6 +63,6 @@ Tada !
 
 A screenshot of my desktop with trello2txt/conky:
 
-![screenshot of conky and trello2txt](https://raw.github.com/GustavePate/trello2txt/master/trello+conky_thumb.png "Conky + Trello screenshot")
+![screenshot of conky and trello2txt](https://raw.github.com/GustavePate/trello2txt/master/trello+conky.png "Conky + Trello screenshot")
 
 
