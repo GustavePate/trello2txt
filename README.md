@@ -19,7 +19,7 @@ On debian/ubuntu:
 
 or
 
-    pip install requests
+    [sudo] pip install requests
 
 ## Installation
 
