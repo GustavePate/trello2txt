@@ -60,36 +60,36 @@ TEXT
 
 ${color1}TODO List
 ${voffset -20}
-${font Sans:size=9}${texeci 600 ~/git/trello2txt/trello2txt.py ~/git/trello2txt/conf.py > ~/owncloud/sync/TODO.txt}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '1p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '1p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '2p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '2p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '3p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '3p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '4p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '4p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '5p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '5p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '6p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '6p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '7p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '7p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '8p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '8p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '9p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '9p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '10p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '10p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '11p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '11p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '12p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '12p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '13p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '13p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '14p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '14p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '15p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '15p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '16p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '16p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '17p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '17p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '18p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '18p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '19p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '19p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '20p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '20p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '21p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '21p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '22p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '22p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '23p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '23p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '24p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '24p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '25p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '25p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '26p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '26p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '27p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '27p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '28p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '28p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '29p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '29p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '30p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '30p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-${font Sans:size=9}${if_match "${texeci 10 sed -n '31p' ~/owncloud/sync/TODO.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '31p' ~/owncloud/sync/TODO.txt  | cut -c 1-70}
-
+${font Sans:size=9}${texeci 600 ~/git/trello2txt/trello2txt.py ~/git/trello2txt/conf.py -d /tmp/trello.txt }
+${font Sans:size=9}${if_match "${texeci 10 sed -n '1p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '1p' ~/tmp/  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '2p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '2p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '3p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '3p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '4p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '4p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '5p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '5p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '6p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '6p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '7p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '7p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '8p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '8p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '9p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '9p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '10p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '10p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '11p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '11p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '12p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '12p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '13p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '13p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '14p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '14p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '15p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '15p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '16p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '16p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '17p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '17p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '18p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '18p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '19p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '19p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '20p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '20p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '21p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '21p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '22p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '22p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '23p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '23p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '24p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '24p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '25p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '25p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '26p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '26p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '27p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '27p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '28p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '28p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '29p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '29p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '30p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '30p' /tmp/trello.txt  | cut -c 1-70}
+${font Sans:size=9}${if_match "${texeci 10 sed -n '31p' /tmp/trello.txt  | cut -c 1-1}" == "!"}${color5}${else}${color2}${endif}${texeci 10 sed -n '31p' /tmp/trello.txt  | cut -c 1-70}
+${color1}${font Sans:size=9}${texeci 10 echo `wc -l /tmp/trello.txt | cut -d ' ' -f1`-31 | bc -l | sed 's/-.*/0/' | awk '{if ($1!=0){print $1,"more left..."}}'}
