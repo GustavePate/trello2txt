@@ -39,7 +39,8 @@ Change the configuration, you will need:
 
 Adjust the filters to your needs (by default only cards with orange and red labels will be display)
 
-Then just run
+Then just run:
+
     python /path/to/trello2txt/trello2txt.py /path/to/trello2txt/conf.py -s
 
 Enjoy !
