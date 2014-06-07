@@ -1,3 +1,11 @@
+TOC
+=========
+
+* [Trellomerge: synchronize your trello boards](#Trellomerge) "Trello merge synchronize boards")
+* [Trello2txt: dump your boards to text](#Trello2txt) "Trello merge synchronize boards")
+
+
+
 Trello2txt
 ==========
 
@@ -75,7 +83,10 @@ Trellomerge
 ===========
 
 Trellomerge allows you to define a master and a slave board.
-The slave board will be updated withthe master cards and lists while keeping its own cards and lists.
+The slave board will be updated with the master cards and lists while keeping its own cards and lists.
+Cards coming from the master board are prefixed in the slave board.
+
+Use crontab to keep your trello boards synchronized.
 
 *usage:*
 
