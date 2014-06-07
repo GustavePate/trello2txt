@@ -1,8 +1,8 @@
 Trello utilities
 ==================
 
-* [Trellomerge: synchronize your trello boards](#trellomerge) "Trello merge synchronize boards")
-* [Trello2txt: dump your boards to text](#trello2txt) "Trello merge synchronize boards")
+* [Trellomerge: synchronize your trello boards](#trellomerge) "Trello merge synchronize boards"
+* [Trello2txt: dump your boards to text](#trello2txt) "Trello merge synchronize boards"
 
 
 ## Requirements
