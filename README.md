@@ -43,6 +43,10 @@ Then just run:
 
     python /path/to/trello2txt/trello2txt.py /path/to/trello2txt/conf.py -s
 
+or to create a local file:
+
+    python /path/to/trello2txt/trello2txt.py /path/to/trello2txt/conf.py -s -d /tmp/trello.txt
+
 Enjoy !
 
 ## Use it with conky
@@ -64,6 +68,15 @@ Tada !
 
 A screenshot of my desktop with trello2txt/conky:
 
-![screenshot of conky and trello2txt](https://raw.github.com/GustavePate/trello2txt/master/trello+conky.png "Conky + Trello screenshot")
+![screenshot of conky and trello2txt](https://raw.github.com/GustavePate/trello2txt/master/pics/trello+conky.png "Conky + Trello screenshot")
 
 
+Trellomerge
+===========
+
+Trellomerge allows you to define a master and a slave board.
+The slave board will be updated withthe master cards and lists while keeping its own cards and lists.
+
+*usage:*
+
+    python /path/to/trello2txt/trellomerge.py /path/to/trello2txt/conf.py
