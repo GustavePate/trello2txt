@@ -1,8 +1,8 @@
 TOC
 =========
 
-* [Trellomerge: synchronize your trello boards](#Trellomerge) "Trello merge synchronize boards")
-* [Trello2txt: dump your boards to text](#Trello2txt) "Trello merge synchronize boards")
+* [Trellomerge: synchronize your trello boards](#trellomerge) "Trello merge synchronize boards")
+* [Trello2txt: dump your boards to text](#trello2txt) "Trello merge synchronize boards")
 
 
 
