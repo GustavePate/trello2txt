@@ -85,8 +85,8 @@ A screenshot of my desktop with trello2txt/conky:
 Trellomerge
 ===========
 
-Trellomerge allows you to define a master and a slave board.
-The slave board will be updated with the master cards and lists while keeping its own cards and lists.
+Trellomerge allows you to merge a master in a slave board.
+The slave board will be synchronized with the master cards and lists while keeping its own cards and lists.
 Cards coming from the master board are prefixed in the slave board.
 
 Use crontab to keep your trello boards synchronized.
