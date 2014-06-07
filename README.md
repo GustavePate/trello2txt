@@ -1,21 +1,9 @@
-TOC
-=========
+Trello utilities
+==================
 
 * [Trellomerge: synchronize your trello boards](#trellomerge) "Trello merge synchronize boards")
 * [Trello2txt: dump your boards to text](#trello2txt) "Trello merge synchronize boards")
 
-
-
-Trello2txt
-==========
-
-Fetch trello cards from a board and output their text in stdout. Notable use case: use it with conky !
-
-## Context
-
-While improving my workflow, I was searching to have my trello tasks quickly accessible.
-Then I lokk at my conky dashboard ;)
-All I needed was a trello2txt tool. Here it is !
 
 ## Requirements
 
@@ -31,11 +19,24 @@ or
 
 ## Installation
 
-First
-
     git clone https://github.com/GustavePate/trello2txt
 
-Then
+
+Trello2txt
+==========
+
+Fetch trello cards from a board and output their text in stdout. Notable use case: use it with conky !
+
+## Context
+
+While improving my workflow, I was searching to have my trello tasks quickly accessible.
+Then I lokk at my conky dashboard ;)
+All I needed was a trello2txt tool. Here it is !
+
+## Configuration
+
+
+Run
 
     vim /path/to/trello2txt/conf.py
 
@@ -47,7 +48,9 @@ Change the configuration, you will need:
 
 Adjust the filters to your needs (by default only cards with orange and red labels will be display)
 
-Then just run:
+## Usage
+
+Just run:
 
     python /path/to/trello2txt/trello2txt.py /path/to/trello2txt/conf.py -s
 
@@ -88,6 +91,17 @@ Cards coming from the master board are prefixed in the slave board.
 
 Use crontab to keep your trello boards synchronized.
 
-*usage:*
+## Configuration
+
+Run
+
+    vim /path/to/trello2txt/conf.py
+
+Change the configuration, you will need:
+- a trello api developper key [here](https://trello.com/docs/).
+- a trello api developper token [here](https://trello.com/docs/).
+- your master and slave board id (see the url in your webbrowser when you're connected to trello)
+
+## Usage
 
     python /path/to/trello2txt/trellomerge.py /path/to/trello2txt/conf.py
