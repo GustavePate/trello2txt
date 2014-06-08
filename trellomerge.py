@@ -7,6 +7,7 @@ import sys
 import argparse
 import os
 from dao.trellodao import TrelloBoardDAO
+from objects.trelloutils import TrelloUtils
 
 conf = {}
 
@@ -79,7 +80,7 @@ def main():
                 print "** ", mc['name'], "does not exist in slave board"
 
                 # create it
-                sc = slavedao.copyCardToList(mc['id'], slavelist['id'], prefix)
+                sc = slavedao.copyCardToList(mc, slavelist['id'], prefix)
                 print "** ", mc['name'], "is now created in slave board"
             # if exists in slave
             else:
@@ -93,7 +94,7 @@ def main():
                     slavedao.deleteCard(sc['id'])
                     print "** ", mc['name'], "has been deleted"
                     # recreate it
-                    sc = slavedao.copyCardToList(mc['id'], slavelist['id'], prefix)
+                    sc = slavedao.copyCardToList(mc, slavelist['id'], prefix)
                     print "** ", mc['name'], "has been recreated"
 
             syncslavecards.append(sc['id'])
@@ -118,19 +119,11 @@ def main():
         # reordrer cards
         print "* reorder cards:", sl['name']
         priority = ['green', 'yellow', 'orange', 'red']
-        ignorelist = []
-        toreorder = [sc for sc in slavecards if sc['labels'] != []]
-        for p in priority:
-            for sc in toreorder:
-                colors = sc['labels']
-                colorpresence = None
-                colorpresence = [label for label in colors if label['color'] == p]
-                if colorpresence != []:
-                    print "** ", sc['name'], " has a label ", p
-                    if sc['id'] not in ignorelist:
-                        slavedao.moveCard(sc['id'], 'top')
-                        print "** ", sc['name'], " moved to top ", p
-                        ignorelist.append(sc['id'])
+        tu = TrelloUtils(slavedao)
+        if sl['name'] in conf['orderbyduedate']:
+            tu.reorderListByDueDate(sl['id'])
+        else:
+            tu.reorderListByPriority(sl['id'], priority)
 
 
 if __name__ == "__main__":

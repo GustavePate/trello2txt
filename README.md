@@ -86,8 +86,16 @@ Trellomerge
 ===========
 
 Trellomerge allows you to merge a master in a slave board.
-The slave board will be synchronized with the master cards and lists while keeping its own cards and lists.
-Cards coming from the master board are prefixed in the slave board.
+
+Theses requirements will be applied in order to synchronize trello boards:
+
+* Lists from the master board will be created in the slave board
+* Cards from the master board will be created in the slave board
+* Cards from the slave board will be untouched
+* Lists from the slave board will be untouched
+* Cards coming from the master board are prefixed in the slave board.
+* Slave lists are reordered by labels (red first, green last)
+* You can specify to sort some slave board lists by due date
 
 Use crontab to keep your trello boards synchronized.
 

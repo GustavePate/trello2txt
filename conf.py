@@ -46,4 +46,8 @@ masterboard = u'y79lF0eI'
 slaveboard = u'yh8jqhba'
 testboard = u'HCqmI3Sb'
 
+# prefix to add to cards copied from the master list
 slavecardsprefix = '[kr] '
+
+# theses slave lists will be sorted by due date and not by priority [default behaviour]
+orderbyduedate = ['Calendar']

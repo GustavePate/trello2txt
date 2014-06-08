@@ -244,7 +244,39 @@ class TrelloBoardDAO(object):
             print json.dumps(r.json(), sort_keys=True, indent=4)
         return res
 
-    def copyCardToList(self, cardid, listid, prefix, verbose=None):
+    def setDueDate(self, card, duedate='null', verbose=None):
+        res = card
+        url = ''
+        if (duedate is not None) and (duedate != 'null'):
+            res = None
+            url = ''.join(['https://api.trello.com/1/cards/',
+                           card['id'],
+                           '/due?&key=',
+                           self._appkey,
+                           '&token=',
+                           self._token,
+                           '&value=',
+                           duedate])
+            r = requests.put(url)
+
+            if r.status_code != 200:
+                print "GENERAL ERROR unable to get card:" + str(r.status_code) + r.text + u'\n'
+                raise Exception("setDueDate:" + str(r.status_code))
+            else:
+                res = r.json()
+        if verbose:
+            print 'url: ', url
+            print json.dumps(r.json(), sort_keys=True, indent=4)
+        return res
+
+    def copyCardToList(self, card, listid, prefix, verbose=None):
+        res = None
+        res = self.copyCardIdToList(card['id'], listid, prefix, verbose)
+        if card['due'] != 'null':
+            res = self.setDueDate(res, card['due'])
+        return res
+
+    def copyCardIdToList(self, cardid, listid, prefix, verbose=None):
         res = None
 
         url = ''.join(['https://api.trello.com/1/cards',

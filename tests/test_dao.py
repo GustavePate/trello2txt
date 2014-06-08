@@ -1,5 +1,6 @@
 import pytest
 from dao.trellodao import TrelloBoardDAO
+from datetime import datetime
 
 
 conf = {}
@@ -26,8 +27,22 @@ def test_copy(conffile):
     listid = conf['tdao'].getListId("test")
     assert listid is not None
     r = conf['tdao'].createCard(listid, "to copy", "red", True)
-    r2 = conf['tdao'].copyCardToList(r['id'], listid, prefix, True)
+    r2 = conf['tdao'].copyCardIdToList(r['id'], listid, prefix, True)
     assert ''.join([prefix, r['name']]) == r2['name']
+
+
+def test_setduedate(conffile):
+    listid = conf['tdao'].getListId("test")
+    r = conf['tdao'].createCard(listid, "duedate", "red", True)
+    dt = datetime.now()
+    datestr = dt.isoformat('T')
+    # cut last millis
+    datestr = datestr[:23]
+    datestr = ''.join([datestr, 'Z'])
+    print datestr
+    r = conf['tdao'].setDueDate(r, datestr, True)
+    assert r['due'] is not None
+    assert r['due'] != 'null'
 
 
 def test_getlist(conffile):
