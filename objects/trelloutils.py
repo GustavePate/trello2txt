@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 
 
 class TrelloUtils(object):
@@ -19,10 +20,10 @@ class TrelloUtils(object):
                 colorpresence = None
                 colorpresence = [label for label in colors if label['color'] == p]
                 if colorpresence != []:
-                    print "** ", sc['name'], " has a label ", p
+                    print "** ", sc['name'].encode('utf-8'), " has a label ", p
                     if sc['id'] not in ignorelist:
                         self._dao.moveCard(sc['id'], 'top')
-                        print "** ", sc['name'], " moved to top ", p
+                        print "** ", sc['name'].encode('utf-8'), " moved to top ", p
                         ignorelist.append(sc['id'])
 
     def reorderListByDueDate(self, listid):
@@ -30,6 +31,6 @@ class TrelloUtils(object):
         toreorder = [sc for sc in cards if sc['due'] != 'null']
         neworder = sorted(toreorder, key=lambda x: x['due'], reverse=True)
         for c in neworder:
-            print "** ", c['name'], " has a due date ", c['due']
+            print "** ", c['name'].encode('utf-8'), " has a due date ", c['due'].encode('utf-8')
             self._dao.moveCard(c['id'], 'top')
-            print "** ", c['name'], " moved to top "
+            print "** ", c['name'].encode('utf-8'), " moved to top "

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import requests
 import json
 
@@ -221,6 +222,7 @@ class TrelloBoardDAO(object):
             #     res[c[u'name']] = color
         if verbose:
             print url
+            print 'encoding: ', r.encoding
             print json.dumps(r.json(), sort_keys=True, indent=4)
         return res
 
