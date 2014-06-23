@@ -271,6 +271,31 @@ class TrelloBoardDAO(object):
             print json.dumps(r.json(), sort_keys=True, indent=4)
         return res
 
+    def setLabel(self, card, label='red', verbose=None):
+        res = card
+        url = ''
+        res = None
+        url = ''.join(['https://api.trello.com/1/cards/',
+                       card['id'],
+                       '/labels?&key=',
+                       self._appkey,
+                       '&token=',
+                       self._token,
+                       '&value=',
+                       label])
+        r = requests.put(url)
+
+        if r.status_code != 200:
+            print "GENERAL ERROR unable to get card:" + str(r.status_code) + r.text + u'\n'
+            raise Exception("setLabel:" + str(r.status_code))
+        else:
+            res = r.json()
+
+        if verbose:
+            print 'url: ', url
+            print json.dumps(r.json(), sort_keys=True, indent=4)
+        return res
+
     def copyCardToList(self, card, listid, prefix, verbose=None):
         res = None
         res = self.copyCardIdToList(card['id'], listid, prefix, verbose)

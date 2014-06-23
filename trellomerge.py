@@ -123,6 +123,7 @@ def main():
         tu = TrelloUtils(slavedao)
         if sl['name'] in conf['orderbyduedate']:
             tu.reorderListByDueDate(sl['id'])
+            tu.redSoonDueDate(sl['id'])
         else:
             tu.reorderListByPriority(sl['id'], priority)
 

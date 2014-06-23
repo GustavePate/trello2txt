@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 import requests
 # import json
 import sys
 # from collections import OrderedDict
 import argparse
 import os
+from dao.trellodao import TrelloBoardDAO
 
 
 conf = {}
@@ -43,6 +43,10 @@ class ListModel(object):
             res = self._name.upper() + u"\n"
             count = 0
             for c in self._cards[u'all']:
+                for td in conf['COLOR_TO_DISPLAY'].keys():
+                    if self._cards[td] is not None:
+                        if c in self._cards[td]:
+                            res = res + conf['COLOR_TO_DISPLAY'][td]
                 res = res + c + u"\n"
                 count = count + 1
                 if count >= conf['BY_NUMBER_COUNT']:

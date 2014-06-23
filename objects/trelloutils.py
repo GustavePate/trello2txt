@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from datetime import datetime
+from datetime import timedelta
 
 
 class TrelloUtils(object):
@@ -8,6 +10,20 @@ class TrelloUtils(object):
 
     def __init__(self, trello_dao):
         self._dao = trello_dao
+
+    def redSoonDueDate(self, listid):
+        cards = self._dao.getOpenCards(listid)
+        today = datetime.today().date()
+        td = timedelta(days=2)
+        near_futur = today + td
+
+        for c in cards:
+            duestr = c['due']
+            if duestr is not None and duestr != 'null':
+                duedate = datetime.strptime(duestr, "%Y-%m-%dT%H:%M:%S.%fZ").date()
+                if duedate < near_futur:
+                    # make it red
+                    self._dao.setLabel(c, 'red')
 
     def reorderListByPriority(self, listid, labels_order_by_priority_asc):
 
