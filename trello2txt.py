@@ -44,7 +44,7 @@ class ListModel(object):
             count = 0
             for c in self._cards[u'all']:
                 for td in conf['COLOR_TO_DISPLAY'].keys():
-                    if self._cards[td] is not None:
+                    if (td in self._cards.keys()) and (self._cards[td] is not None):
                         if c in self._cards[td]:
                             res = res + conf['COLOR_TO_DISPLAY'][td]
                 res = res + c + u"\n"
@@ -148,6 +148,8 @@ def main():
                               '&token=',
                               conf['token']]))
     if r.status_code != 200:
+        print r.text
+
         text.append("GENERAL ERROR unable to fetch board lists:" + str(r.status_code) + u'\n')
         exitmain(text, 1)
 
