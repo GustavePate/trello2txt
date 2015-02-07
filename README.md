@@ -2,7 +2,8 @@
 Moved to a new repository
 ==============================
 
-    Check [mergetrellobaords](https://github.com/GustavePate/mergetrelloboards) for update !
+> Check [mergetrellobaords](https://github.com/GustavePate/mergetrelloboards) for update !
+
 
 
 
