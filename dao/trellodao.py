@@ -321,6 +321,10 @@ class TrelloBoardDAO(object):
                        cardid])
         r = requests.post(url)
 
+        if r.status_code != 200:
+            print "GENERAL ERROR unable to get card to copy:" + str(r.status_code) + r.text + u'\n'
+            raise Exception("copyCardToList:" + str(r.status_code))
+
         if verbose:
             print url
             print json.dumps(r.json(), sort_keys=True, indent=4)

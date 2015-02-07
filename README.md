@@ -1,3 +1,12 @@
+
+Moved to a new repository
+==============================
+
+    Check [mergetrellobaords](https://github.com/GustavePate/mergetrelloboards) for update !
+
+
+
+
 Trello utilities
 ==================
 
@@ -21,6 +30,38 @@ or
 
     git clone https://github.com/GustavePate/trello2txt
 
+
+Trellomerge
+===========
+
+Trellomerge allows you to merge a master in a slave board.
+
+Theses requirements will be applied in order to synchronize trello boards:
+
+* Lists from the master board will be created in the slave board
+* Cards from the master board will be created in the slave board
+* Cards from the slave board will be untouched
+* Lists from the slave board will be untouched
+* Cards coming from the master board are prefixed in the slave board.
+* Slave lists are reordered by labels (red first, green last)
+* You can specify to sort some slave board lists by due date
+
+Use crontab to keep your trello boards synchronized.
+
+## Configuration
+
+Run
+
+    vim /path/to/trello2txt/conf.py
+
+Change the configuration, you will need:
+- a trello api developper key [here](https://trello.com/docs/).
+- a trello api developper token [here](https://trello.com/docs/).
+- your master and slave board id (see the url in your webbrowser when you're connected to trello)
+
+## Usage
+
+    python /path/to/trello2txt/trellomerge.py /path/to/trello2txt/conf.py
 
 Trello2txt
 ==========
@@ -81,35 +122,3 @@ A screenshot of my desktop with trello2txt/conky:
 
 ![screenshot of conky and trello2txt](https://raw.github.com/GustavePate/trello2txt/master/pics/trello+conky.png "Conky + Trello screenshot")
 
-
-Trellomerge
-===========
-
-Trellomerge allows you to merge a master in a slave board.
-
-Theses requirements will be applied in order to synchronize trello boards:
-
-* Lists from the master board will be created in the slave board
-* Cards from the master board will be created in the slave board
-* Cards from the slave board will be untouched
-* Lists from the slave board will be untouched
-* Cards coming from the master board are prefixed in the slave board.
-* Slave lists are reordered by labels (red first, green last)
-* You can specify to sort some slave board lists by due date
-
-Use crontab to keep your trello boards synchronized.
-
-## Configuration
-
-Run
-
-    vim /path/to/trello2txt/conf.py
-
-Change the configuration, you will need:
-- a trello api developper key [here](https://trello.com/docs/).
-- a trello api developper token [here](https://trello.com/docs/).
-- your master and slave board id (see the url in your webbrowser when you're connected to trello)
-
-## Usage
-
-    python /path/to/trello2txt/trellomerge.py /path/to/trello2txt/conf.py
